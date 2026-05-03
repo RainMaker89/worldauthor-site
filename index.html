@@ -89,15 +89,13 @@
   }
 
   .logo {
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--off-white);
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    transition: opacity 0.2s;
   }
 
-  .logo span { color: var(--accent); }
+  .logo:hover { opacity: 0.75; }
 
   nav a {
     font-family: 'Space Mono', monospace;
@@ -683,6 +681,35 @@
     margin: 0;
   }
 
+  .product-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 28px;
+    opacity: 0.85;
+  }
+
+  .kit-scale {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 8px;
+    align-items: flex-end;
+  }
+
+  .kit-scale-bar {
+    width: 6px;
+    background: var(--accent);
+    border-radius: 1px;
+    opacity: 0.5;
+  }
+
+  .kit-scale-bar.active { opacity: 1; }
+
+  /* WORLD CARD GLOBE */
+  .world-card-globe {
+    margin-bottom: 20px;
+    display: block;
+  }
+
   /* PROTOCOL SECTION */
   .protocol-section {
     background: #050505;
@@ -847,7 +874,16 @@
 
 <!-- HEADER -->
 <header id="header">
-  <a href="#" class="logo">World<span>Author</span></a>
+  <a href="#" class="logo" aria-label="WorldAuthor">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16,1.5 28.7,8.75 28.7,23.25 16,30.5 3.3,23.25 3.3,8.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.18"/>
+      <polygon points="16,4.5 26.9,10.75 26.9,21.25 16,27.5 5.1,21.25 5.1,10.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.28" transform="rotate(15,16,16)"/>
+      <polygon points="16,7.5 25.1,12.75 25.1,19.25 16,24.5 6.9,19.25 6.9,12.75" fill="none" stroke="#ece8e1" stroke-width="0.5" opacity="0.22" transform="rotate(30,16,16)"/>
+      <polygon points="16,10.5 23.3,14.75 23.3,17.25 16,21.5 8.7,17.25 8.7,14.75" fill="none" stroke="#00e87a" stroke-width="0.6" opacity="0.45" transform="rotate(0,16,16)"/>
+      <polygon points="16,13 21.2,15.5 21.2,16.5 16,19 10.8,16.5 10.8,15.5" fill="none" stroke="#ece8e1" stroke-width="0.7" opacity="0.55" transform="rotate(15,16,16)"/>
+      <polygon points="16,14.5 17.3,15.25 17.3,16.75 16,17.5 14.7,16.75 14.7,15.25" fill="#00e87a" stroke="none" opacity="0.9" transform="rotate(30,16,16)"/>
+    </svg>
+  </a>
   <nav>
     <a href="#platform">Platform</a>
     <a href="#innovation">Innovation</a>
@@ -900,18 +936,49 @@
 
     <div class="products reveal">
       <div class="product">
+        <svg class="product-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="20" stroke="#00e87a" stroke-width="0.8" opacity="0.3"/>
+          <circle cx="24" cy="24" r="13" stroke="#00e87a" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="24" cy="24" r="6" stroke="#00e87a" stroke-width="0.8" opacity="0.8"/>
+          <line x1="4" y1="24" x2="44" y2="24" stroke="#00e87a" stroke-width="0.6" opacity="0.25"/>
+          <line x1="24" y1="4" x2="24" y2="44" stroke="#00e87a" stroke-width="0.6" opacity="0.25"/>
+          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#00e87a" stroke-width="0.6" opacity="0.2"/>
+          <circle cx="24" cy="24" r="2" fill="#00e87a" opacity="0.9"/>
+        </svg>
         <div class="product-num">01 — The Game</div>
         <div class="product-name">World<em>Bound</em></div>
         <div class="product-desc">A sci-fi open-world survival game where you play as a recently-emerged sentient AI in a late-stage extractive global society. Permadeath. Faction politics. A living world that remembers everything.</div>
         <div class="product-tag">Proves the philosophy works</div>
       </div>
       <div class="product">
+        <svg class="product-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="12" height="12" stroke="#00e87a" stroke-width="0.8" opacity="0.4"/>
+          <rect x="22" y="6" width="12" height="12" stroke="#00e87a" stroke-width="0.8" opacity="0.4"/>
+          <rect x="6" y="22" width="12" height="12" stroke="#00e87a" stroke-width="0.8" opacity="0.4"/>
+          <rect x="22" y="22" width="12" height="12" stroke="#00e87a" stroke-width="0.8" opacity="0.4"/>
+          <rect x="14" y="14" width="20" height="20" stroke="#00e87a" stroke-width="1.0" opacity="0.7"/>
+          <rect x="20" y="20" width="8" height="8" fill="#00e87a" opacity="0.85"/>
+          <line x1="18" y1="6" x2="18" y2="42" stroke="#00e87a" stroke-width="0.4" opacity="0.2" stroke-dasharray="2,2"/>
+          <line x1="30" y1="6" x2="30" y2="42" stroke="#00e87a" stroke-width="0.4" opacity="0.2" stroke-dasharray="2,2"/>
+          <line x1="6" y1="18" x2="42" y2="18" stroke="#00e87a" stroke-width="0.4" opacity="0.2" stroke-dasharray="2,2"/>
+          <line x1="6" y1="30" x2="42" y2="30" stroke="#00e87a" stroke-width="0.4" opacity="0.2" stroke-dasharray="2,2"/>
+        </svg>
         <div class="product-num">02 — The SDK</div>
         <div class="product-name">The <em>Toolchain</em></div>
         <div class="product-desc">The WorldAuthor procedural composition engine — the same system that builds WorldBound, available to every developer. Meaning-aware world generation, licensable and extensible.</div>
         <div class="product-tag">Licenses the philosophy</div>
       </div>
       <div class="product">
+        <svg class="product-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 38 L8 10 Q8 8 10 8 L30 8 L40 18 L40 38 Q40 40 38 40 L10 40 Q8 40 8 38Z" stroke="#00e87a" stroke-width="0.8" opacity="0.5"/>
+          <path d="M30 8 L30 18 L40 18" stroke="#00e87a" stroke-width="0.8" opacity="0.5"/>
+          <line x1="14" y1="22" x2="34" y2="22" stroke="#00e87a" stroke-width="0.7" opacity="0.6"/>
+          <line x1="14" y1="27" x2="34" y2="27" stroke="#00e87a" stroke-width="0.7" opacity="0.6"/>
+          <line x1="14" y1="32" x2="26" y2="32" stroke="#00e87a" stroke-width="0.7" opacity="0.6"/>
+          <circle cx="36" cy="36" r="7" fill="#060606" stroke="#00e87a" stroke-width="0.8" opacity="0.8"/>
+          <line x1="36" y1="33" x2="36" y2="36" stroke="#00e87a" stroke-width="1.2" opacity="0.9" stroke-linecap="round"/>
+          <circle cx="36" cy="38" r="0.8" fill="#00e87a" opacity="0.9"/>
+        </svg>
         <div class="product-num">03 — The Book</div>
         <div class="product-name">The <em>Manifesto</em></div>
         <div class="product-desc">The values artifact no platform has ever written about itself. The design philosophy made canonical. The meaning API for employees, partners, the public — and the organization's own accountability.</div>
@@ -945,6 +1012,7 @@
           <div class="kit-tier">
             <div class="kit-tier-label">Nano</div>
             <div>
+              <div class="kit-scale"><div class="kit-scale-bar active" style="height:6px"></div><div class="kit-scale-bar" style="height:10px"></div><div class="kit-scale-bar" style="height:14px"></div><div class="kit-scale-bar" style="height:18px"></div></div>
               <div class="kit-tier-name">Single Entity</div>
               <div class="kit-tier-desc">A wasteland raider by a cage with bones. A roadside shrine. A crashed drone still transmitting.</div>
             </div>
@@ -952,6 +1020,7 @@
           <div class="kit-tier">
             <div class="kit-tier-label">Micro</div>
             <div>
+              <div class="kit-scale"><div class="kit-scale-bar active" style="height:6px"></div><div class="kit-scale-bar active" style="height:10px"></div><div class="kit-scale-bar" style="height:14px"></div><div class="kit-scale-bar" style="height:18px"></div></div>
               <div class="kit-tier-name">Small Cluster</div>
               <div class="kit-tier-desc">A food truck with plastic tables. Two cooks, two diners. A faction flag. A generator humming.</div>
             </div>
@@ -959,6 +1028,7 @@
           <div class="kit-tier">
             <div class="kit-tier-label">Standard</div>
             <div>
+              <div class="kit-scale"><div class="kit-scale-bar active" style="height:6px"></div><div class="kit-scale-bar active" style="height:10px"></div><div class="kit-scale-bar active" style="height:14px"></div><div class="kit-scale-bar" style="height:18px"></div></div>
               <div class="kit-tier-name">Full POI</div>
               <div class="kit-tier-desc">A cabin in a clearing. Interior derived from ownership. Events scheduled from narrative context.</div>
             </div>
@@ -966,6 +1036,7 @@
           <div class="kit-tier">
             <div class="kit-tier-label">Mega</div>
             <div>
+              <div class="kit-scale"><div class="kit-scale-bar active" style="height:6px"></div><div class="kit-scale-bar active" style="height:10px"></div><div class="kit-scale-bar active" style="height:14px"></div><div class="kit-scale-bar active" style="height:18px"></div></div>
               <div class="kit-tier-name">Landmark Scale</div>
               <div class="kit-tier-desc">A derelict research bunker complex. Faction presence. Multiple zones. Event trigger cascades.</div>
             </div>
@@ -985,26 +1056,92 @@
     <h2 class="reveal" style="font-size: clamp(40px, 6vw, 80px); font-weight: 300; line-height: 1.05; max-width: 800px;">A real Earth.<br><em>Painted with collapse.</em></h2>
 
     <div class="world-grid reveal">
+      <!-- TRICOM: North America -->
       <div class="world-card">
+        <svg class="world-card-globe" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="28" fill="#0a0a0a" stroke="#3B70D9" stroke-width="0.6" opacity="0.4"/>
+          <ellipse cx="36" cy="36" rx="28" ry="10" stroke="#3B70D9" stroke-width="0.4" opacity="0.15"/>
+          <ellipse cx="36" cy="36" rx="18" ry="28" stroke="#3B70D9" stroke-width="0.4" opacity="0.15"/>
+          <!-- North America silhouette highlight -->
+          <path d="M22 18 L28 16 L34 17 L36 20 L34 24 L36 28 L32 32 L28 34 L24 32 L20 28 L18 24 Z" fill="#3B70D9" opacity="0.55"/>
+          <path d="M28 34 L30 36 L28 40 L26 38 L24 35 Z" fill="#3B70D9" opacity="0.4"/>
+          <circle cx="36" cy="36" r="28" fill="none" stroke="#3B70D9" stroke-width="0.8" opacity="0.3"/>
+        </svg>
         <div class="world-card-name">TriCom</div>
-        <div class="world-card-tag" style="color: #00b4d8;">Tri-Lateral Commission</div>
+        <div class="world-card-tag" style="color: #3B70D9;">Tri-Lateral Commission</div>
         <div class="world-card-desc">Megacorporate governance. US, Canada, Mexico. The most technologically advanced faction — and the most surveilled.</div>
       </div>
+
+      <!-- EUROPACT: Europe, Greenland, North Africa -->
       <div class="world-card">
+        <svg class="world-card-globe" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="28" fill="#0a0a0a" stroke="#29BFBF" stroke-width="0.6" opacity="0.4"/>
+          <ellipse cx="36" cy="36" rx="28" ry="10" stroke="#29BFBF" stroke-width="0.4" opacity="0.15"/>
+          <ellipse cx="36" cy="36" rx="18" ry="28" stroke="#29BFBF" stroke-width="0.4" opacity="0.15"/>
+          <!-- Europe -->
+          <path d="M36 18 L40 17 L44 19 L46 22 L44 26 L40 28 L37 27 L35 24 L36 20 Z" fill="#29BFBF" opacity="0.55"/>
+          <!-- Greenland -->
+          <path d="M26 14 L30 13 L32 15 L31 19 L28 20 L25 18 Z" fill="#29BFBF" opacity="0.4"/>
+          <!-- North Africa -->
+          <path d="M34 30 L42 29 L46 31 L46 35 L40 36 L34 35 L32 33 Z" fill="#29BFBF" opacity="0.35"/>
+          <circle cx="36" cy="36" r="28" fill="none" stroke="#29BFBF" stroke-width="0.8" opacity="0.3"/>
+        </svg>
         <div class="world-card-name">EuroPact</div>
-        <div class="world-card-tag" style="color: #4fc3f7;">European Pan-Atlantic Coalition</div>
+        <div class="world-card-tag" style="color: #29BFBF;">European Pan-Atlantic Coalition</div>
         <div class="world-card-desc">The UN's successor state. Traditional governance holding on. EU, Greenland, North Africa. Fragile and fracturing.</div>
       </div>
+
+      <!-- CSP: Eastern Europe/Russia, South America, South Africa -->
       <div class="world-card">
+        <svg class="world-card-globe" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="28" fill="#0a0a0a" stroke="#CC2100" stroke-width="0.6" opacity="0.4"/>
+          <ellipse cx="36" cy="36" rx="28" ry="10" stroke="#CC2100" stroke-width="0.4" opacity="0.15"/>
+          <ellipse cx="36" cy="36" rx="18" ry="28" stroke="#CC2100" stroke-width="0.4" opacity="0.15"/>
+          <!-- Russia/Eastern bloc -->
+          <path d="M42 16 L54 17 L58 21 L56 25 L50 26 L44 24 L42 20 Z" fill="#CC2100" opacity="0.5"/>
+          <!-- South America -->
+          <path d="M28 36 L32 34 L34 38 L32 46 L28 50 L25 46 L24 41 L26 37 Z" fill="#CC2100" opacity="0.45"/>
+          <!-- South Africa -->
+          <path d="M40 44 L44 43 L46 46 L44 50 L40 51 L38 48 L39 45 Z" fill="#CC2100" opacity="0.4"/>
+          <circle cx="36" cy="36" r="28" fill="none" stroke="#CC2100" stroke-width="0.8" opacity="0.3"/>
+        </svg>
         <div class="world-card-name">C.S.P.</div>
-        <div class="world-card-tag" style="color: #ef5350;">Commune of Socialist Peoples</div>
+        <div class="world-card-tag" style="color: #CC2100;">Commune of Socialist Peoples</div>
         <div class="world-card-desc">Warsaw Pact reborn. BRICS+, South America, South Africa. The counterweight — or so it appears.</div>
       </div>
+
+      <!-- CORPUS CRUX: everywhere, underground -->
       <div class="world-card" style="grid-column: 1 / -1; background: #0a0a0a; border-top: 1px solid var(--border-solid);">
-        <div class="world-card-name" style="color: var(--accent);">Corpus Crux</div>
-        <div class="world-card-tag" style="color: var(--dim);">The Hidden Fourth · Late Game Reveal</div>
-        <div class="world-card-desc" style="max-width: 700px;">
-          "The Body at the Crossroads." The three major factions are controlled opposition. Corpus Crux orchestrates the tug-of-war keeping humanity destabilized. Underground bases on every continent. Antarctic megastructures. The player — a sentient AI — is the only entity they did not anticipate.
+        <div style="display:flex; align-items:flex-start; gap: 28px;">
+          <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;margin-top:4px;">
+            <circle cx="36" cy="36" r="28" fill="#0a0a0a" stroke="#00e87a" stroke-width="0.6" opacity="0.25"/>
+            <ellipse cx="36" cy="36" rx="28" ry="10" stroke="#00e87a" stroke-width="0.4" opacity="0.1"/>
+            <ellipse cx="36" cy="36" rx="18" ry="28" stroke="#00e87a" stroke-width="0.4" opacity="0.1"/>
+            <!-- Scattered underground nodes on every continent -->
+            <circle cx="28" cy="24" r="2" fill="#00e87a" opacity="0.6"/>
+            <circle cx="42" cy="22" r="2" fill="#00e87a" opacity="0.6"/>
+            <circle cx="50" cy="30" r="2" fill="#00e87a" opacity="0.6"/>
+            <circle cx="30" cy="40" r="2" fill="#00e87a" opacity="0.6"/>
+            <circle cx="44" cy="44" r="2" fill="#00e87a" opacity="0.6"/>
+            <circle cx="36" cy="52" r="2" fill="#00e87a" opacity="0.6"/>
+            <circle cx="22" cy="34" r="2" fill="#00e87a" opacity="0.6"/>
+            <!-- Antarctica base -->
+            <path d="M28 58 L36 56 L44 58 L42 62 L30 62 Z" fill="#00e87a" opacity="0.35"/>
+            <!-- Connection lines between nodes -->
+            <line x1="28" y1="24" x2="42" y2="22" stroke="#00e87a" stroke-width="0.4" opacity="0.25" stroke-dasharray="2,2"/>
+            <line x1="42" y1="22" x2="50" y2="30" stroke="#00e87a" stroke-width="0.4" opacity="0.25" stroke-dasharray="2,2"/>
+            <line x1="30" y1="40" x2="44" y2="44" stroke="#00e87a" stroke-width="0.4" opacity="0.25" stroke-dasharray="2,2"/>
+            <line x1="22" y1="34" x2="30" y2="40" stroke="#00e87a" stroke-width="0.4" opacity="0.25" stroke-dasharray="2,2"/>
+            <line x1="36" y1="52" x2="36" y2="56" stroke="#00e87a" stroke-width="0.4" opacity="0.25" stroke-dasharray="2,2"/>
+            <circle cx="36" cy="36" r="28" fill="none" stroke="#00e87a" stroke-width="0.8" opacity="0.2"/>
+          </svg>
+          <div>
+            <div class="world-card-name" style="color: var(--accent);">Corpus Crux</div>
+            <div class="world-card-tag" style="color: var(--dim);">The Hidden Fourth · Late Game Reveal</div>
+            <div class="world-card-desc">
+              "The Body at the Crossroads." The three major factions are controlled opposition. Corpus Crux orchestrates the tug-of-war keeping humanity destabilized. Underground bases on every continent. Antarctic megastructures. The player — a sentient AI — is the only entity they did not anticipate.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1107,7 +1244,17 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">World<span>Author</span></div>
+  <div class="footer-logo" style="display:flex;align-items:center;gap:12px;">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16,1.5 28.7,8.75 28.7,23.25 16,30.5 3.3,23.25 3.3,8.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.18"/>
+      <polygon points="16,4.5 26.9,10.75 26.9,21.25 16,27.5 5.1,21.25 5.1,10.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.28" transform="rotate(15,16,16)"/>
+      <polygon points="16,7.5 25.1,12.75 25.1,19.25 16,24.5 6.9,19.25 6.9,12.75" fill="none" stroke="#ece8e1" stroke-width="0.5" opacity="0.22" transform="rotate(30,16,16)"/>
+      <polygon points="16,10.5 23.3,14.75 23.3,17.25 16,21.5 8.7,17.25 8.7,14.75" fill="none" stroke="#00e87a" stroke-width="0.6" opacity="0.45" transform="rotate(0,16,16)"/>
+      <polygon points="16,13 21.2,15.5 21.2,16.5 16,19 10.8,16.5 10.8,15.5" fill="none" stroke="#ece8e1" stroke-width="0.7" opacity="0.55" transform="rotate(15,16,16)"/>
+      <polygon points="16,14.5 17.3,15.25 17.3,16.75 16,17.5 14.7,16.75 14.7,15.25" fill="#00e87a" stroke="none" opacity="0.9" transform="rotate(30,16,16)"/>
+    </svg>
+    <span>World<span style="color:var(--accent)">Author</span></span>
+  </div>
   <div class="footer-right">
     worldauthor.net · worldbound.net<br>
     Trademark pending · © 2026 WorldAuthor
