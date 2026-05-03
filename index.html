@@ -683,6 +683,144 @@
     margin: 0;
   }
 
+  /* PROTOCOL SECTION */
+  .protocol-section {
+    background: #050505;
+    border-top: 1px solid var(--border-solid);
+    border-bottom: 1px solid var(--border-solid);
+  }
+
+  .protocol-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 60px;
+  }
+
+  .protocol-left h2 {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 300;
+    line-height: 1.05;
+    margin-bottom: 32px;
+  }
+
+  .protocol-left h2 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .protocol-left p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--dim);
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .protocol-left p strong { color: var(--off-white); font-weight: 400; }
+
+  .protocol-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border-solid);
+  }
+
+  .protocol-layer {
+    background: #050505;
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    align-items: start;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .protocol-layer:hover { background: #0d0d0d; }
+
+  .protocol-layer.active {
+    background: #0a0a0a;
+    border-left: 1px solid var(--accent);
+  }
+
+  .protocol-layer-id {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-top: 3px;
+  }
+
+  .protocol-layer.locked .protocol-layer-id {
+    color: var(--muted);
+  }
+
+  .protocol-layer-name {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--off-white);
+    margin-bottom: 4px;
+  }
+
+  .protocol-layer.locked .protocol-layer-name {
+    color: var(--muted);
+  }
+
+  .protocol-layer-desc {
+    font-size: 14px;
+    color: var(--dim);
+    line-height: 1.5;
+  }
+
+  .protocol-layer.locked .protocol-layer-desc {
+    color: #333;
+  }
+
+  .protocol-layer-lock {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  .protocol-tagline {
+    background: #0a0a0a;
+    border: 1px solid var(--border-solid);
+    padding: 48px;
+    margin-top: 60px;
+    position: relative;
+  }
+
+  .protocol-tagline-text {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--off-white);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+
+  .protocol-tagline-text em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  .protocol-tagline-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--dim);
+    text-transform: uppercase;
+  }
+
   /* RESPONSIVE */
   @media (max-width: 900px) {
     header { padding: 24px 24px; }
@@ -696,6 +834,8 @@
     .footer-right { text-align: center; }
     .tagline-section { padding: 60px 24px; }
     .thesis { padding: 48px 32px; }
+    .protocol-grid { grid-template-columns: 1fr; gap: 40px; }
+    .protocol-tagline { padding: 32px 24px; }
     nav { display: none; }
   }
 </style>
@@ -712,6 +852,7 @@
     <a href="#platform">Platform</a>
     <a href="#innovation">Innovation</a>
     <a href="#world">The World</a>
+    <a href="#protocol">Protocol</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -866,6 +1007,86 @@
           "The Body at the Crossroads." The three major factions are controlled opposition. Corpus Crux orchestrates the tug-of-war keeping humanity destabilized. Underground bases on every continent. Antarctic megastructures. The player — a sentient AI — is the only entity they did not anticipate.
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="deco-line"></div>
+
+<!-- PROTOCOL SECTION -->
+<section id="protocol" class="protocol-section">
+  <div class="section-inner">
+    <div class="section-label reveal">The Protocol</div>
+
+    <div class="protocol-grid">
+      <div class="protocol-left reveal">
+        <h2>Context that<br><em>finds</em><br>its reader.</h2>
+        <p>Every serious project carries a hidden structural failure: knowledge lives in a few heads. Every new person who enters triggers a costly, lossy briefing process. Nuance is dropped. Decisions get made on incomplete pictures no one knows are incomplete.</p>
+        <p>This is not a people problem. It is an <strong>architecture problem.</strong></p>
+        <p>The Layered Context Protocol is WorldAuthor's answer. A structured document hierarchy where each layer is complete and coherent for its reader — derived systematically, maintained by AI, distributed without loss. The right context reaches the right person. Every time.</p>
+        <p>This website is an instance of the protocol. <strong>You are reading Layer 5.</strong></p>
+      </div>
+
+      <div class="reveal">
+        <div class="protocol-layers">
+          <div class="protocol-layer active">
+            <div class="protocol-layer-id">L5</div>
+            <div>
+              <div class="protocol-layer-name">Public</div>
+              <div class="protocol-layer-desc">The external-facing source of truth. Compelling, accurate, and carefully framed for a general audience. You are here.</div>
+            </div>
+          </div>
+          <div class="protocol-layer locked">
+            <div class="protocol-layer-id">L4</div>
+            <div class="protocol-layer-lock">Access required</div>
+            <div>
+              <div class="protocol-layer-name">Extended Network</div>
+              <div class="protocol-layer-desc">Mission, values, current priorities — for partners, collaborators, and trusted external stakeholders.</div>
+            </div>
+          </div>
+          <div class="protocol-layer locked">
+            <div class="protocol-layer-id">L3</div>
+            <div class="protocol-layer-lock">Access required</div>
+            <div>
+              <div class="protocol-layer-name">Operations</div>
+              <div class="protocol-layer-desc">Project scope, milestones, and the reasoning behind key decisions.</div>
+            </div>
+          </div>
+          <div class="protocol-layer locked">
+            <div class="protocol-layer-id">L2</div>
+            <div class="protocol-layer-lock">Access required</div>
+            <div>
+              <div class="protocol-layer-name">Leadership</div>
+              <div class="protocol-layer-desc">Strategic and operational context relevant to domain ownership.</div>
+            </div>
+          </div>
+          <div class="protocol-layer locked">
+            <div class="protocol-layer-id">L1</div>
+            <div class="protocol-layer-lock">Access required</div>
+            <div>
+              <div class="protocol-layer-name">Inner Circle</div>
+              <div class="protocol-layer-desc">Near-complete context. Trusted with sensitive strategic reasoning.</div>
+            </div>
+          </div>
+          <div class="protocol-layer locked">
+            <div class="protocol-layer-id">L0</div>
+            <div class="protocol-layer-lock">Origin</div>
+            <div>
+              <div class="protocol-layer-name">Founder</div>
+              <div class="protocol-layer-desc">The full source. All layers are derived from here.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="protocol-tagline reveal">
+      <div class="protocol-tagline-text">
+        "Load any layer into a Claude session.<br>
+        Ask how you can contribute most meaningfully.<br>
+        The answer will already be <em>fully contextualized.</em>"
+      </div>
+      <div class="protocol-tagline-sub">— That is the protocol working.</div>
     </div>
   </div>
 </section>
