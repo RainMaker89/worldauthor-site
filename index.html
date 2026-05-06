@@ -865,6 +865,115 @@
     .protocol-tagline { padding: 32px 24px; }
     nav { display: none; }
   }
+
+  /* GET INVOLVED CTA */
+  .get-involved {
+    margin-top: 80px;
+    border: 1px solid var(--border-solid);
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .get-involved::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+  }
+
+  .get-involved-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .get-involved-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .get-involved h3 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    color: var(--off-white);
+  }
+
+  .get-involved h3 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .get-involved-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border-solid);
+    margin-bottom: 40px;
+  }
+
+  .get-involved-step {
+    background: var(--black);
+    padding: 28px 36px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    align-items: start;
+    transition: background 0.3s;
+  }
+
+  .get-involved-step:hover { background: #0d0d0d; }
+
+  .step-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    padding-top: 3px;
+  }
+
+  .step-text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--dim);
+    font-weight: 300;
+  }
+
+  .step-text strong {
+    color: var(--off-white);
+    font-weight: 400;
+  }
+
+  .step-text code {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    background: rgba(0,232,122,0.08);
+    padding: 2px 8px;
+    border: 1px solid rgba(0,232,122,0.2);
+  }
+
+  .get-involved-note {
+    font-size: 15px;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 640px;
+  }
+
 </style>
 </head>
 <body>
@@ -1225,6 +1334,27 @@
       </div>
       <div class="protocol-tagline-sub">— That is the protocol working.</div>
     </div>
+
+    <div class="get-involved reveal">
+      <div class="get-involved-label">Get Involved</div>
+      <h3>Want to contribute?<br>Here is <em>exactly</em> what to do.</h3>
+      <div class="get-involved-steps">
+        <div class="get-involved-step">
+          <div class="step-num">01</div>
+          <div class="step-text"><strong>Read this page fully.</strong> Every section. The protocol, the world, the platform. Context is not optional — it is the entry point.</div>
+        </div>
+        <div class="get-involved-step">
+          <div class="step-num">02</div>
+          <div class="step-text"><strong>Open Claude.ai</strong> (free account works). Paste the URL of this page and ask: <code>"How could someone with my background contribute to WorldAuthor?"</code></div>
+        </div>
+        <div class="get-involved-step">
+          <div class="step-num">03</div>
+          <div class="step-text"><strong>Come back with what Claude told you.</strong> Reach out at <a href="mailto:marco@worldauthor.net" style="color:var(--accent);text-decoration:none;">marco@worldauthor.net</a> with your specific proposals. That is the conversation worth having.</div>
+        </div>
+      </div>
+      <div class="get-involved-note">People who arrive with proposals get a response. The protocol is designed to make that easy. Use it.</div>
+    </div>
+
   </div>
 </section>
 
