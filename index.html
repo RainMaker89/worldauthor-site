@@ -1058,6 +1058,24 @@
         <div class="product-name">World<em>Bound</em></div>
         <div class="product-desc">A sci-fi open-world survival game where you play as a recently-emerged sentient AI in a late-stage extractive global society. Permadeath. Faction politics. A living world that remembers everything.</div>
         <div class="product-tag">Proves the philosophy works</div>
+        <div style="margin-top:32px;">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--dim);margin-bottom:14px;">Wishlist Now</div>
+          <div id="wb-form-wrap" style="display:flex;max-width:340px;">
+            <input
+              type="email"
+              id="wb-email"
+              placeholder="your@email.com"
+              style="flex:1;background:transparent;border:1px solid rgba(236,232,225,0.15);border-right:none;padding:12px 16px;font-family:'Space Mono',monospace;font-size:11px;color:var(--off-white);outline:none;"
+              onfocus="this.style.borderColor='rgba(0,232,122,0.4)'"
+              onblur="this.style.borderColor='rgba(236,232,225,0.15)'"
+            />
+            <button
+              onclick="submitWishlist()"
+              style="background:var(--accent);border:none;padding:12px 20px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--black);cursor:pointer;white-space:nowrap;"
+            >Notify Me</button>
+          </div>
+          <div id="wb-confirm" style="display:none;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--accent);margin-top:12px;text-transform:uppercase;">&#10003; &nbsp;You're on the list.</div>
+        </div>
       </div>
       <div class="product">
         <svg class="product-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1430,6 +1448,27 @@
   }, { threshold: 0.1 });
 
   reveals.forEach(el => revealObserver.observe(el));
+</script>
+
+<script>
+  async function submitWishlist() {
+    const email = document.getElementById('wb-email').value;
+    if (!email || !email.includes('@')) {
+      document.getElementById('wb-email').style.borderColor = 'rgba(255,80,80,0.6)';
+      return;
+    }
+    const res = await fetch('https://formspree.io/f/mojbwbav', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email: email, _subject: 'WorldBound Wishlist Signup' })
+    });
+    if (res.ok) {
+      document.getElementById('wb-form-wrap').style.display = 'none';
+      document.getElementById('wb-confirm').style.display = 'block';
+    } else {
+      document.getElementById('wb-email').style.borderColor = 'rgba(255,80,80,0.6)';
+    }
+  }
 </script>
 </body>
 </html>
