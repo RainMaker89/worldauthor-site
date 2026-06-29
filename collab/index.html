@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collab — WorldAuthor</title>
+<meta name="description" content="However you got here, there's a way in. Try the Layered Context Protocol yourself, or reach out directly.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="/" class="logo" aria-label="WorldAuthor">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16,1.5 28.7,8.75 28.7,23.25 16,30.5 3.3,23.25 3.3,8.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.18"/>
+      <polygon points="16,4.5 26.9,10.75 26.9,21.25 16,27.5 5.1,21.25 5.1,10.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.28" transform="rotate(15,16,16)"/>
+      <polygon points="16,7.5 25.1,12.75 25.1,19.25 16,24.5 6.9,19.25 6.9,12.75" fill="none" stroke="#ece8e1" stroke-width="0.5" opacity="0.22" transform="rotate(30,16,16)"/>
+      <polygon points="16,10.5 23.3,14.75 23.3,17.25 16,21.5 8.7,17.25 8.7,14.75" fill="none" stroke="#00e87a" stroke-width="0.6" opacity="0.45" transform="rotate(0,16,16)"/>
+      <polygon points="16,13 21.2,15.5 21.2,16.5 16,19 10.8,16.5 10.8,15.5" fill="none" stroke="#ece8e1" stroke-width="0.7" opacity="0.55" transform="rotate(15,16,16)"/>
+      <polygon points="16,14.5 17.3,15.25 17.3,16.75 16,17.5 14.7,16.75 14.7,15.25" fill="#00e87a" stroke="none" opacity="0.9" transform="rotate(30,16,16)"/>
+    </svg>
+  </a>
+  <nav>
+    <a href="/#platform">Platform</a>
+    <a href="/#innovation">Innovation</a>
+    <a href="/#world">The World</a>
+    <a href="/#protocol">Protocol</a>
+    <a href="/advising/">Advising</a>
+    <a href="/collab/">Collab</a>
+  </nav>
+</header>
+
+<section class="content-page">
+  <div class="section-label reveal">Collab</div>
+  <h1 class="reveal">However you got here,<br>there's a way <em>in.</em></h1>
+  <p class="lede reveal">Maybe you read the Embedded Context Advising page and you're running an organization that needs this. Maybe you're a developer, a designer, a fellow founder, or just someone who fell down the WorldBound rabbit hole and wants to be part of it. Either way &mdash; yes. There's a way in.</p>
+
+  <div class="prose">
+    <p class="reveal">Everything here runs on the <a href="/resources/#protocol-full" style="color:var(--accent);text-decoration:none;">Layered Context Protocol</a>: a structured way of sharing context so the right person gets the right depth, every time. This page is the front door &mdash; try it yourself before you even reach out.</p>
+  </div>
+
+  <div class="get-involved reveal" style="margin-top: 40px;">
+    <div class="get-involved-label">Get Involved</div>
+    <h3>Want in?<br>Here is <em>exactly</em> what to do.</h3>
+    <div class="get-involved-steps">
+      <div class="get-involved-step">
+        <div class="step-num">01</div>
+        <div class="step-text"><strong>Read the homepage and the Advising page.</strong> Context is not optional &mdash; it is the entry point.</div>
+      </div>
+      <div class="get-involved-step">
+        <div class="step-num">02</div>
+        <div class="step-text"><strong>Open Claude.ai</strong> (free account works). Paste the URL of this site and ask: <code>"How could someone with my background contribute to WorldAuthor?"</code></div>
+      </div>
+      <div class="get-involved-step">
+        <div class="step-num">03</div>
+        <div class="step-text"><strong>Come back with what Claude told you.</strong> Use the form below, or email directly. That is the conversation worth having.</div>
+      </div>
+    </div>
+    <div class="get-involved-note">People who arrive with proposals get a response. The protocol is designed to make that easy. Use it.</div>
+  </div>
+
+  <div class="deco-line" style="margin: 60px 0;"></div>
+
+  <div class="prose">
+    <p class="reveal">Already know what you want to say? Skip the exercise.</p>
+  </div>
+
+  <form id="collab-form" class="reveal" style="max-width: 600px; margin-top: 20px;" onsubmit="submitCollab(event)">
+    <div style="margin-bottom: 20px;">
+      <input type="text" id="collab-name" placeholder="Name" required
+        style="width:100%; padding:14px 16px; background:#0d0d0d; border:1px solid var(--border-solid); color:var(--off-white); font-family:'Cormorant Garamond', Georgia, serif; font-size:17px; border-radius:2px;">
+    </div>
+    <div style="margin-bottom: 20px;">
+      <input type="email" id="collab-email" placeholder="Email" required
+        style="width:100%; padding:14px 16px; background:#0d0d0d; border:1px solid var(--border-solid); color:var(--off-white); font-family:'Cormorant Garamond', Georgia, serif; font-size:17px; border-radius:2px;">
+    </div>
+    <div style="margin-bottom: 24px;">
+      <textarea id="collab-message" placeholder="What's on your mind?" required rows="5"
+        style="width:100%; padding:14px 16px; background:#0d0d0d; border:1px solid var(--border-solid); color:var(--off-white); font-family:'Cormorant Garamond', Georgia, serif; font-size:17px; border-radius:2px; resize:vertical;"></textarea>
+    </div>
+    <button type="submit" class="btn-primary" style="border:none; cursor:pointer;"><span>Send it</span></button>
+    <div id="collab-confirm" style="display:none; margin-top:20px; color:var(--accent); font-family:'Space Mono', monospace; font-size:14px;">Sent. We'll be in touch.</div>
+  </form>
+
+  <div class="prose" style="margin-top: 40px;">
+    <p class="reveal">Or go straight to <a href="mailto:marco@worldauthor.net" style="color:var(--accent);text-decoration:none;">marco@worldauthor.net</a>.</p>
+  </div>
+</section>
+
+<script>
+  async function submitCollab(e) {
+    e.preventDefault();
+    const name = document.getElementById('collab-name').value;
+    const email = document.getElementById('collab-email').value;
+    const message = document.getElementById('collab-message').value;
+    const form = document.getElementById('collab-form');
+    const confirm = document.getElementById('collab-confirm');
+
+    try {
+      const res = await fetch('https://formspree.io/f/mpqglkbr', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message, _subject: 'WorldAuthor Collab Inquiry' })
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        confirm.style.display = 'block';
+      } else {
+        alert('Something went wrong — try emailing marco@worldauthor.net directly.');
+      }
+    } catch (err) {
+      alert('Something went wrong — try emailing marco@worldauthor.net directly.');
+    }
+  }
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo" style="display:flex;align-items:center;gap:12px;">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16,1.5 28.7,8.75 28.7,23.25 16,30.5 3.3,23.25 3.3,8.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.18"/>
+      <polygon points="16,4.5 26.9,10.75 26.9,21.25 16,27.5 5.1,21.25 5.1,10.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.28" transform="rotate(15,16,16)"/>
+      <polygon points="16,7.5 25.1,12.75 25.1,19.25 16,24.5 6.9,19.25 6.9,12.75" fill="none" stroke="#ece8e1" stroke-width="0.5" opacity="0.22" transform="rotate(30,16,16)"/>
+      <polygon points="16,10.5 23.3,14.75 23.3,17.25 16,21.5 8.7,17.25 8.7,14.75" fill="none" stroke="#00e87a" stroke-width="0.6" opacity="0.45" transform="rotate(0,16,16)"/>
+      <polygon points="16,13 21.2,15.5 21.2,16.5 16,19 10.8,16.5 10.8,15.5" fill="none" stroke="#ece8e1" stroke-width="0.7" opacity="0.55" transform="rotate(15,16,16)"/>
+      <polygon points="16,14.5 17.3,15.25 17.3,16.75 16,17.5 14.7,16.75 14.7,15.25" fill="#00e87a" stroke="none" opacity="0.9" transform="rotate(30,16,16)"/>
+    </svg>
+    <span>World<span style="color:var(--accent)">Author</span></span>
+  </div>
+  <div class="footer-right">
+    worldauthor.net · worldbound.net<br>
+    Trademark pending · © 2026 WorldAuthor
+  </div>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+  });
+
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Header scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>

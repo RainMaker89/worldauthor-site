@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embedded Context Advising — WorldAuthor</title>
+<meta name="description" content="A new discipline for organizations adopting AI faster than they can govern it. Operating Context Architecture, built on-site, by people who sit in the room.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="/" class="logo" aria-label="WorldAuthor">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16,1.5 28.7,8.75 28.7,23.25 16,30.5 3.3,23.25 3.3,8.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.18"/>
+      <polygon points="16,4.5 26.9,10.75 26.9,21.25 16,27.5 5.1,21.25 5.1,10.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.28" transform="rotate(15,16,16)"/>
+      <polygon points="16,7.5 25.1,12.75 25.1,19.25 16,24.5 6.9,19.25 6.9,12.75" fill="none" stroke="#ece8e1" stroke-width="0.5" opacity="0.22" transform="rotate(30,16,16)"/>
+      <polygon points="16,10.5 23.3,14.75 23.3,17.25 16,21.5 8.7,17.25 8.7,14.75" fill="none" stroke="#00e87a" stroke-width="0.6" opacity="0.45" transform="rotate(0,16,16)"/>
+      <polygon points="16,13 21.2,15.5 21.2,16.5 16,19 10.8,16.5 10.8,15.5" fill="none" stroke="#ece8e1" stroke-width="0.7" opacity="0.55" transform="rotate(15,16,16)"/>
+      <polygon points="16,14.5 17.3,15.25 17.3,16.75 16,17.5 14.7,16.75 14.7,15.25" fill="#00e87a" stroke="none" opacity="0.9" transform="rotate(30,16,16)"/>
+    </svg>
+  </a>
+  <nav>
+    <a href="/#platform">Platform</a>
+    <a href="/#innovation">Innovation</a>
+    <a href="/#world">The World</a>
+    <a href="/#protocol">Protocol</a>
+    <a href="/advising/">Advising</a>
+    <a href="/collab/">Collab</a>
+  </nav>
+</header>
+
+<section class="content-page">
+  <div class="section-label reveal">Advising</div>
+  <h1 class="reveal">Embedded Context Advising</h1>
+  <p class="lede reveal">A new discipline for organizations adopting AI faster than they can govern it.</p>
+
+  <div class="prose">
+    <p class="reveal">In April, Uber's own CTO confirmed the company burned through a full year's AI budget in four months. Its COO has since admitted, on record, that the spending hasn't yet translated into measurable improvement for riders or drivers. Instead of changing strategies, the fix was merely to impose a blunt spending cap, per-engineer.</p>
+
+    <p class="reveal">In June, a Netflix engineer accidentally shipped an internal AI context file (the instructions meant to guide the LLM — in this case Claude — through Netflix's own codebase) inside a public iOS app binary. Weeks earlier, the same thing had happened at Apple (also Claude&hellip; no judgment, we like Claude a lot too!).</p>
+
+    <p class="reveal">These are not isolated mistakes. They are the visible symptoms of a problem every organization adopting AI now has, whether they've noticed it yet or not: <strong>context is being treated as an afterthought.</strong> Decided ad hoc, by whichever engineer happens to touch a given file, with no organizational ownership, no governance, and no design.</p>
+
+    <p class="reveal">Context is not a footnote to how AI performs inside an organization. It is the single largest variable. And right now, almost no one is treating it as a discipline in its own right.</p>
+
+    <blockquote class="reveal">Anyone who's played through Metal Gear Solid 2: Sons of Liberty already knows what happens when no one owns how information gets filtered and framed. That's not a hypothetical for us anymore, there's an enterprise AI budget and the organization's reputation at stake.</blockquote>
+
+    <p class="reveal">A handful of people are already circling this problem. Developer-tooling specs are emerging that tell engineers how to structure a codebase so an AI agent can navigate it by incorporating measures such as: clean directory naming, a context file at the root, conventions an agent can follow without re-learning the project from scratch every session. Data platform vendors are doing something adjacent; wiring AI agents into a company's existing schemas and catalogs so a model can find the right table without guessing.</p>
+
+    <p class="reveal">Both are useful, but neither is the problem we're describing.</p>
+
+    <p class="reveal">Most AI consulting right now is advice about how to use agents better. Useful for a five-person startup. Insufficient for an organization the size of Uber or Apple, where the problem was never "how do we prompt better", rather it's that no one owns how an entire organization's accumulated judgment gets represented at all.</p>
+
+    <p class="reveal">A codebase isn't where an organization's actual context lives. The reasoning behind a compliance posture, the history of a hard decision, the unwritten reason a process exists the way it does — that context lives in people. In meetings that were never transcribed. In a VP's head, re-explained slightly differently to every new hire who asks. No directory convention captures that, because it was never written down in the first place. It has to be drawn out, structured, and made legible to the humans who'll use it and the AI systems increasingly making decisions alongside them.</p>
+
+    <p class="reveal">That's the layer currently missing in most organizations today, across the entire spectrum of size and industry. We call it <strong>Operating Context Architecture</strong>: the deliberately structured, trust-graduated map of how an organization actually thinks, decides, and operates. And it needs to be built so both people and AI can act on it correctly, without re-explaining it every time.</p>
+
+    <p class="reveal">We call the discipline that produces it <strong>Embedded Context Advising</strong>.</p>
+
+    <p class="reveal">Operating Context Architecture isn't a framework you buy off a shelf, fill in, and walk away with. It can't possibly be. The thing being captured doesn't exist anywhere yet in a form anyone could simply hand over, as it lives in how your people actually think, day to day, in rooms a vendor never sits in.</p>
+
+    <p class="reveal"><strong>So we sit in the room.</strong></p>
+
+    <p class="reveal">An Embedded Context Advisor works on-site, alongside the people who already run things instead of replacing them. The closest comparison isn't a typical consulting engagement. It's closer to how a Special Forces advisory team operates inside a host country's own military: embedded, present, working through, with, and by the existing structure, not replacing it. The team doesn't take over. It learns the terrain from the inside, builds capability into the people already there, and leaves the host force stronger and more self-sufficient than it found them.</p>
+
+    <p class="reveal">That's the posture here. An Embedded Context Advisor shadows leadership the way a scribe shadows a court — listening, capturing, asking the question that surfaces what's never been written down, because no one's ever needed to write it down before. Reasoning that lives only in someone's head gets structured. Decisions that get re-explained from scratch to every new hire get a permanent, accurate home. And just as importantly, that home isn't a free-for-all: every piece of context is structured with <strong>graduated trust</strong> — so a new contractor, a department head, and your AI systems each see exactly the layer they should, no more and no less.</p>
+
+    <p class="reveal">The advisor doesn't just hand over the finished architecture and disappear. They hand over the method, too (what to keep capturing, how to keep it current, who owns it next). The work isn't done when the architecture exists. It's done when your own people can maintain and extend it without us.</p>
+
+    <p class="reveal">This is new, we're not pretending otherwise.</p>
+
+    <p class="reveal">There isn't a category for this yet&hellip; at least, not really. There are tools for codebases, platforms for data, and a flood of advice on prompting agents better. There isn't, as far as we can find, anyone doing the harder work: sitting inside an organization long enough to structure what it actually knows, so that work outlasts whoever's currently holding it in their head.</p>
+
+    <p class="reveal">We think that's worth being first at. Not because being first matters for its own sake, but because the companies who get there before this becomes obvious to everyone will spend the next decade compounding an advantage the rest of the industry is still trying to name.</p>
+
+    <p class="reveal">If you run an organization that's already feeling the gap between how fast you've adopted AI and how little you actually trust what it <em>understands</em> about you, <strong>that's</strong> exactly the conversation we want to have.</p>
+
+    <div class="hero-cta reveal" style="margin-top: 50px;">
+      <a href="/collab/" class="btn-primary"><span>Let's talk — Collab</span></a>
+      <a href="/advising/" class="btn-ghost">Back to Advising</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo" style="display:flex;align-items:center;gap:12px;">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16,1.5 28.7,8.75 28.7,23.25 16,30.5 3.3,23.25 3.3,8.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.18"/>
+      <polygon points="16,4.5 26.9,10.75 26.9,21.25 16,27.5 5.1,21.25 5.1,10.75" fill="none" stroke="#00e87a" stroke-width="0.5" opacity="0.28" transform="rotate(15,16,16)"/>
+      <polygon points="16,7.5 25.1,12.75 25.1,19.25 16,24.5 6.9,19.25 6.9,12.75" fill="none" stroke="#ece8e1" stroke-width="0.5" opacity="0.22" transform="rotate(30,16,16)"/>
+      <polygon points="16,10.5 23.3,14.75 23.3,17.25 16,21.5 8.7,17.25 8.7,14.75" fill="none" stroke="#00e87a" stroke-width="0.6" opacity="0.45" transform="rotate(0,16,16)"/>
+      <polygon points="16,13 21.2,15.5 21.2,16.5 16,19 10.8,16.5 10.8,15.5" fill="none" stroke="#ece8e1" stroke-width="0.7" opacity="0.55" transform="rotate(15,16,16)"/>
+      <polygon points="16,14.5 17.3,15.25 17.3,16.75 16,17.5 14.7,16.75 14.7,15.25" fill="#00e87a" stroke="none" opacity="0.9" transform="rotate(30,16,16)"/>
+    </svg>
+    <span>World<span style="color:var(--accent)">Author</span></span>
+  </div>
+  <div class="footer-right">
+    worldauthor.net · worldbound.net<br>
+    Trademark pending · © 2026 WorldAuthor
+  </div>
+</footer>
+
+<script>
+  // Custom cursor
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+  });
+
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Header scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => revealObserver.observe(el));
+</script>
+</body>
+</html>
