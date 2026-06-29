@@ -27,8 +27,6 @@
   </a>
   <nav>
     <a href="/#platform">Platform</a>
-    <a href="/#innovation">Innovation</a>
-    <a href="/#world">The World</a>
     <a href="/advising/">Advising</a>
     <a href="/insights/">Insights</a>
     <a href="/resources/">Resources</a>
@@ -105,7 +103,7 @@
     const confirm = document.getElementById('collab-confirm');
 
     try {
-      const res = await fetch('https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID', {
+      const res = await fetch('https://formspree.io/f/mpqglkbr', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({ name: name, email: email, message: message, _subject: 'WorldAuthor Collab Inquiry' })
