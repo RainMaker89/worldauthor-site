@@ -135,6 +135,10 @@
   /* Hamburger hidden on desktop */
   .nav-toggle { display: none; }
 
+  /* Mobile menu hidden by default on all viewports — JS adds .is-open to reveal */
+  .mobile-menu { display: none; }
+  .mobile-menu.is-open { display: flex; }
+
   /* HERO */
   .hero {
     min-height: 100vh;
